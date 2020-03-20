@@ -1,28 +1,35 @@
 <script>
-    function addItem(elem, id, variant) {
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({
-        event: 'eec.addToCart',
-        ecommerce: {
-          'add': [
-            {
-              'name': elem,  
-              'id': id, 
-              'variant': variant,    
-              'list': 'Gallery'
-            
-            }]
-        }
-      });
-
-      var replacer = '/jekyll_ga/checkout';
+  (function addItem() {
+      debugger;
       var location = window.location.href;
       var split = location.split("/")
-      split[split.length -1] = "" + replacer;
-      var newurl = split.join("/");
-      console.log(newurl);
-      window.location.href = newurl
-   
-  }
-    
-    </script>
+      var lastElem = split[split.length -1] 
+      var elem, id, variant;
+      if(lastElem === "shirt") {
+          elem = 'NinjaT-Shirt';
+          id = '67890'
+          variant = 'Black'
+  
+      } else if(lastElem === "cap") {
+          elem = 'Cap';
+          id = '12345'
+          variant = 'White'
+      }
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+          event: 'eec.impressions',
+          ecommerce: {
+            'add': [
+              {
+                'name': elem,  
+                'id': id, 
+                'variant': variant,    
+                'list': 'Gallery'
+              
+              }]
+          }
+        });
+        
+  })()
+      
+      </script>
