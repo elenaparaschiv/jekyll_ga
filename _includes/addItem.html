@@ -1,0 +1,28 @@
+<script>
+    function addItem(elem, id, variant) {
+      window.dataLayer = window.dataLayer || [];
+      debugger;
+      window.dataLayer.push({
+        event: 'eec.impressions',
+        ecommerce: {
+          'add': [
+            {
+              'name': elem,  
+              'id': id, 
+              'variant': variant,    
+              'list': 'Gallery'
+            
+            }]
+        }
+      });
+
+      var replacer = '/jekyll_ga/checkout';
+      var location = window.location.href;
+      var split = location.split("/")
+      split[split.length -1] = "" + replacer;
+      var newurl = split.join("/");
+      console.log(newurl);
+      window.location.href = newurl
+  }
+    
+    </script>
