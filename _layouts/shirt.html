@@ -10,8 +10,10 @@ layout: "default"
         <h2>T-shirt</h2>
         <p>eave this scurvy copyfiller fer yar next adventure and cajol yar clients into walking the plank with ev'ry layout! Configure above, then get yer pirate ipsum...own the high seas, arg!</p>
         <blockquote class="imgur-embed-pub" lang="en" data-id="lhIsXRv"><a href="//imgur.com/lhIsXRv">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
-        <button><a href="/jekyll_ga/checkout"> Add to cart</a> </button>
+        <!-- <button><a href="/jekyll_ga/checkout"> Add to cart</a> </button> -->
+        <button onclick="addItem('NinjaT-Shirt', '67890', 'Black'  )"><a > Add to cart</a> </button>
+
         <div>
-      
+            {% include addItem.html %}
     </div>
 </div>
