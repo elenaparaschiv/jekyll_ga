@@ -5,11 +5,18 @@
         {% include tagbody.html %}
         <main >
         <div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/ecommerce">Ecommerce</a></li>
+            </ul>
+                      
             <h1>Default wrapperr</h1>
             <p>Default text</p>
             {{ content }}
             <p>End default wrapper</p>
         </div>
         </main>
+        {% include formsubmit.html %}
     </body>
 </html>
