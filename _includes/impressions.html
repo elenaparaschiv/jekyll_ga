@@ -1,33 +1,33 @@
 <script>
-    function impressions(details) {
-        console.log('impressions')
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({
-          event: 'eec.impressions',
-          ecommerce: {
-            'impressions': [
-              {
-                'name': 'Cap',       
-                'id': '12345',
-                'price': '15.25',
-                'brand': 'Google',
-                'category': 'Apparel',
-                'variant': 'White',
-                'list': 'Gallery',
-                'position': 1
-              },
-              {
-                'name': 'NinjaT-Shirt',
-                'id': '67890',
-                'price': '33.75',
-                'brand': 'Google',
-                'category': 'Apparel',
-                'variant': 'Black',
-                'list': 'Gallery',
-                'position': 2
-              }]
-          }
-        });
-    }
-    
-    </script>
+  (function impressions(details) {
+    console.log('impressions')
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'eec.impressions',
+      ecommerce: {
+        'impressions': [
+          {
+            'name': 'Cap',       
+            'id': '12345',
+            'price': '15.25',
+            'brand': 'Google',
+            'category': 'Apparel',
+            'variant': 'White',
+            'list': 'Gallery',
+            'position': 1
+          },
+          {
+            'name': 'NinjaT-Shirt',
+            'id': '67890',
+            'price': '33.75',
+            'brand': 'Google',
+            'category': 'Apparel',
+            'variant': 'Black',
+            'list': 'Gallery',
+            'position': 2
+          }]
+      }
+    });
+})()
+  
+  </script>
