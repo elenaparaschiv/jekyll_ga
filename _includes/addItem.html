@@ -1,7 +1,6 @@
 <script>
     function addItem(elem, id, variant) {
       window.dataLayer = window.dataLayer || [];
-      debugger;
       window.dataLayer.push({
         event: 'eec.addToCart',
         ecommerce: {
@@ -15,7 +14,7 @@
             }]
         }
       });
-<!-- /*
+/*
       var replacer = '/jekyll_ga/checkout';
       var location = window.location.href;
       var split = location.split("/")
@@ -23,7 +22,7 @@
       var newurl = split.join("/");
       console.log(newurl);
       window.location.href = newurl
-      */ -->
+      */
   }
     
     </script>
