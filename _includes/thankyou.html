@@ -6,24 +6,12 @@
         var elem, id, variant, price,size;
         var uuid = Date.now();
 
-
-        if(lastElem === "shirt") {
-            elem = 'NinjaT-Shirt';
-            id = '67890'
-            variant = 'Black'
-            price='33.75'
-            size= 'M'
-  
-    
-        } else if(lastElem === "cap") {
-            elem = 'Cap';
-            id = '12345'
-            variant = 'White'
-            price='15.25'
-            size= 'S'
-        } else {
-          return
-      }
+        elem = 'NinjaT-Shirt';
+        id = '67890'
+        variant = 'Black'
+        price='33.75'
+        size= 'M'
+        
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
             event: 'eec.purchase',
