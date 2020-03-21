@@ -3,16 +3,18 @@
       var location = window.location.href;
       var split = location.split("/")
       var lastElem = split[split.length -1] 
-      var elem, id, variant;
+      var elem, id, variant, price;
       if(lastElem === "shirt") {
           elem = 'NinjaT-Shirt';
           id = '67890'
           variant = 'Black'
+          price='100.00'
   
       } else if(lastElem === "cap") {
           elem = 'Cap';
           id = '12345'
           variant = 'White'
+          price='50.00'
       } else {
         return
     }
@@ -20,14 +22,19 @@
       window.dataLayer.push({
           event: 'eec.addToCart',
           ecommerce: {
-            'add': [
-              {
-                'name': elem,  
-                'id': id, 
-                'variant': variant,    
-                'list': 'Gallery'
-              
+            currencyCode:"SEK",
+            add:  {
+              products: [{
+                name: elem,  
+                id: id, 
+                variant: variant,    
+                list: 'Gallery',
+                price: price,
+                quantity: 1
               }]
+            }
+           
+
           }
         });
         
