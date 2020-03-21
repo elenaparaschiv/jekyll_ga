@@ -3,18 +3,21 @@
       var location = window.location.href;
       var split = location.split("/")
       var lastElem = split[split.length -1] 
-      var elem, id, variant, price;
+      var elem, id, variant, price,size;
       if(lastElem === "shirt") {
           elem = 'NinjaT-Shirt';
           id = '67890'
           variant = 'Black'
           price='33.75'
+          size= "M"
+
   
       } else if(lastElem === "cap") {
           elem = 'Cap';
           id = '12345'
           variant = 'White'
           price='15.25'
+          size= "S"
       } else {
         return
     }
@@ -31,6 +34,7 @@
                 'brand': 'Google',
                 'category': 'Apparel',
                 'variant': variant,
+                'size': size,
                 'position':0,
                 'quantity': 1
               }]
